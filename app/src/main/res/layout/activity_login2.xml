@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="@color/logo_green"
+                android:textSize="32dp"
+                ></TextView>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".LoginActivity">
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/logo_green"
+            android:ems="10"
+            android:hint="Email Id"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text=""
+            android:textColor="@color/logo_green"
+            android:textColorHint="@color/logo_green" />
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:backgroundTint="@color/logo_green"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:password="true"
+            android:text=""
+            android:textColor="@color/logo_green"
+            android:textColorHint="@color/logo_green" />
+
+
+        <ImageView
+            android:id="@+id/passVisible"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/visible_eye"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:alpha=".5"
+            android:padding="5dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="250dp"
+
+            android:gravity="center|center_horizontal|center_vertical"
+            android:textColor="#FF0000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:text="Login"
+            android:backgroundTint="@color/logo_green"
+            android:textColor="@color/black"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="350dp"
+            android:background="@drawable/gsignin2"
+            android:foregroundGravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"/>
+
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:gravity="center"
+            android:text="Don't have an account click below "
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="450dp"
+            android:text="Create new account"
+            android:backgroundTint="@color/logo_green"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/resetPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/logo_green"
+            android:text="Forget Password?"
+            android:gravity="center"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:background="@color/purple_700"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/black">
+
+        <ImageView
+            android:id="@+id/homeimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home_green" />
+
+        <ImageView
+            android:id="@+id/userimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/account_green" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
